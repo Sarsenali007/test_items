@@ -11,7 +11,5 @@ jobs:
           apiKey: $16957912-074e606e-5fee-45f1-b802-a11ff6de17fd
           collection: https://www.getpostman.com/collections/56ac0f8216f6ad711d27
           environment: https://www.getpostman.com/collections/56ac0f8216f6ad711d27
-      - name: Install Newman 
-        run: npm install -g newman
       - name: Run Test 
         run: newman run https://www.getpostman.com/collections/56ac0f8216f6ad711d27   
