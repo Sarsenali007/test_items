@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   newman:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
