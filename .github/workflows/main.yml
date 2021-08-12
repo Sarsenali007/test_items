@@ -10,7 +10,8 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run API Tests
         run: newman run https://www.getpostman.com/collections/56ac0f8216f6ad711d27   
-      - name: Publish Test Report
-        uses: mikepenz/action-junit-report@v2.4.2
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
         with:
-          report_paths: '**/build/test-results/test/TEST-*.xml'
+          files: test-results/**/*.xml
